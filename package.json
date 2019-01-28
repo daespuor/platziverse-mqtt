@@ -1,0 +1,25 @@
+{
+  "name": "platziverse-mqtt",
+  "version": "1.0.0",
+  "description": "MQTT server for platziverse",
+  "main": "server.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "start-dev": "SET DEBUG=platziverse:* && nodemon server.js",
+    "start": "SET DEBUG=platziverse:* && && NODE_ENV=production && node server.js"
+  },
+  "author": "Daniel Puerta",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "mosca": "^2.8.1",
+    "redis": "^2.8.0",
+    "platziverse-db": "file:../platziverse-db",
+    "platziverse-utils": "file:../platziverse-utils"
+  }
+}
